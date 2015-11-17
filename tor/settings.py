@@ -49,9 +49,11 @@ NEWSPIDER_MODULE = 'tor.spiders'
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
+
+#This points to your local proxy server that talks to Tor
 HTTP_PROXY = 'http://127.0.0.1:8123'
 DOWNLOADER_MIDDLEWARES = {
-  #Tor Proxy Middleware
+  #Tor Middleware
   'tor.middlewares.ProxyMiddleware': 400
 }
 
